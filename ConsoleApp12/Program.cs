@@ -7,16 +7,32 @@ namespace ConsoleApp12
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Выберите цвет геометрической фигуры: \n1. Зеленый\n2. Синий\n3. Красный\n");
+            string color;
+            color = Console.ReadLine();
+            switch (color)
+            {
+                case "1":
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    break;
+                case "2":
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    break;
+                case "3":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    break;
+            }
+
             Console.WriteLine("Выберите геометрическую фигуру: \n1. Треугольник\n2. Прямоугольник\n3. Ромб" +
                 "\n4. Трапеция\n5. Многоугольник\n");
             string Figuri;
             Figuri = Console.ReadLine();
-
             switch (Figuri)
             {
                 case "1":
                     Treugolnik Figura1 = new Treugolnik();
                     Figura1.PrintTreugolnik();
+
                     break;
                 case "2":
                     Preamougolnik Figura2 = new Preamougolnik();
